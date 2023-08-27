@@ -16,7 +16,7 @@ def crosswordPuzzle(crossword, words):
                     enumerate(row[i:i + word_length])]):
                 return (row_index, i)
 
-    def display_cross_baord(board):
+    def display_cross_board(board):
         for row in board:
             print("".join(row))
 
@@ -25,7 +25,7 @@ def crosswordPuzzle(crossword, words):
 
     def place_word(board, direction, position, word):
         print(f"========= placing word {word} at {position} ===========")
-        display_cross_baord(board)
+        display_cross_board(board)
         row, colum = position
         if direction == "horizontal":
             for i in range(len(word)):
@@ -38,7 +38,7 @@ def crosswordPuzzle(crossword, words):
 
     def delete_word(board, direction, position, word, ):
         print(f"========= deleting word {word} at {position} ===========")
-        display_cross_baord(board)
+        display_cross_board(board)
         row, colum = position
         if direction == "horizontal":
             for i in range(len(word)):
